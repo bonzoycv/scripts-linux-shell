@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# script que muestra tu IP pública
+# Este script que muestra tu IP pública
 
 
 result=$(wget https://ipinfo.io/ip -qO -)
