@@ -1,14 +1,13 @@
 #!/bin/bash
 
-## script basico para actualizar sistemas basados en Debian
+## script para actualizar el sistema ## YCV
 
-#cd /etc
+sudo apt update && sudo apt upgrade -y
+sudo apt autoremove
+flatpak update -y
+sudo snap refresh
 
-#if [ -d /etc/apt ]
 
-#then
-sudo apt update && sudo apt dist-upgrade -y
+echo "El sistema se ha actualizado! Hasta luego $USER."
 
-echo "${USER} El sistema se ha actualizado!"
-
-#fi
+exit
