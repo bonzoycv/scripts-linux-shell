@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## script para actualizar el sistema ## YCV
+## Guardar en /usr/bin para ejecutar
 
 sudo apt update && sudo apt upgrade -y
 sudo apt autoremove
