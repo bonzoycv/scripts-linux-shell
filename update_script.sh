@@ -12,14 +12,8 @@
 
 ## Actualizar paquetes
 
-echo "Updating the system"
+echo "Ingresa tu contraseña para actualizar el sistema"
 sudo apt-get update
-
-## Actualiza apps de flatpak instaladas en el sistema, el comando -y aprueba continuar con la instalación
-flatpak update -y
-
-## Reparar una instalación flatpak  en caso de ocurrir un problema
-sudo flatpak repair
 
 ## Actualizar paquetes y distribución
 sudo apt-get upgrade -y
@@ -30,6 +24,12 @@ sudo apt-get update
 sudo apt-get clean
 sudo apt-get autoclean
 sudo apt-get autoremove
+
+## Actualiza flatpak, el comando -y aprueba continuar con la instalación
+flatpak update -y
+
+## Reparar una instalación flatpak  en caso de ocurrir un problema
+sudo flatpak repair
 
 ## Actualizar una instalación o runtime y desintalar aplicaciones innecesarias
 flatpak update -y
@@ -47,9 +47,14 @@ sudo snap refresh
 
 echo "El sistema se ha actualizado!"
 
-#crea un log del proceso realizado
+#Crea un log del proceso realizado
+sudo date >> "/home/$USER/updatelog.txt"
+
+#Muestra el log almacenado en el archivo de texto
 sudo cat "/home/$USER/updatelog.txt"
 
+## neofetch genera información del equipo
+## Para instalar neofetch usar el siguiente comando - sudo apt install neofetch
 neofetch
 
 exit
