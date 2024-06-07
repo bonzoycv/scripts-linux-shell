@@ -17,7 +17,7 @@ sudo apt-get update
 
 ## Actualizar paquetes y distribución
 sudo apt-get upgrade -y
-sudo apt-get dist upgrade -y
+#sudo apt-get dist upgrade -y
 sudo apt-get update
 
 ## Limpiar instalación y paquetes no necesarios
